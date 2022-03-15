@@ -1,0 +1,54 @@
+PARA INICIAR SIN ANTECEDENTES
+git init : para usar git en ese sitio (carpeta)
+ls : muestra lo que hay
+ll : muestra
+git status : muestra brancheds y el estado (si están subidos al stating area o no)
+git add -A: agrega todos los archivos al stagin area
+git rm --cached <nombre archivo> : elimina ese archivo del stagin area
+git commit -(a)m "<Comentarios>": loggeo al repositorio con comentario (OJO, YA NO ESTÁN EN EL STAGIN AREA)
+git log: commits que hay en el repositorio
+git fetch: actualiza carpetas del repositorio externo al local (después modificarlos con el pull origin)
+git merge <branch1> <branch2>: empuja cambios del branch1 al branch2
+
+TRABAJANDO DENTRO
+git reset --hard: me borra todos los cambios y lo deja como el último commit que habíamos hecho
+git checkout HEAD -- <nombre_archivo>: como antes pero solo con un único archivo
+git log --oneline: me dice los commits con sus nombres; así me puedo mover a versiones anteriores
+git checkout <nombre_anterior_commit>: así me voy a los cambios anteriormente dichos
+git checkout main: así puedo regresar a la versión actual. Con el de antes, puedo haber copiado algún dato y ahora en la actual pegarlo
+- RELEASE: versiones finales
+- ISSUES: cosas que no funcionan. Es una especie de foro que por cada issue se suele hacer un branch
+
+
+
+PARA INICIAR CON REPOSITORIO EXTERNO
+git clone <pego el https de GitHub>
+git push origin main: para subir el código que estoy haciendo al repositorio ONLINE
+git pull origin main: para descargar el código con su última versión
+git branch <nombre branch> : crea nueva branch
+git checkout <nombre branch> : cambio de branch
+git checkout -B <nombre branch>: crea y cambia a la nueva branch
+git branch : muestra todas las branches
+git push -u origin <Nombre branch> :le dice que hay una branch en internet linkeada con la local
+git branch -a :muestra branches locales y remotas
+git checkout main : cambio
+git pull origin main : aseguro última versión
+git branch ---merged : lo que he mergeado
+git merge <Nombre branch> : mergeo mi branch con la master
+git push origin main : lo subo al repositorio online para que todos lo tengan
+git push origin --delete <Nombre branch> : borra la del repositorio externo, pero no de mi máquina
+git branch -d <Nombre branch> : borra la de mi máquina local
+
+---> RESUMEN <---
+git checkout <nombre main> : me pongo en el MAIN
+git pull origin main : descargo última versión
+git branch <Nombre branch> : trabajo en otra branch por si acaso
+git checkout <Nombre branch>
+<modifico código>
+git add -A : al stagin
+git commit -m ""
+git push origin <Nombre branch> : lo subo al repositorio externo
+git checkout <nombre main>
+git branch --merged : para comprobar que no está mergeada
+git merge <Nombre branch>
+git push origin <nombre Main> : subo versión final
