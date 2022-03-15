@@ -52,3 +52,6 @@ git checkout <nombre main>
 git branch --merged : para comprobar que no está mergeada
 git merge <Nombre branch>
 git push origin <nombre Main> : subo versión final
+
+
+resumen resumido con conclusiones
